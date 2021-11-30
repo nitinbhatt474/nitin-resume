@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+header {
+  background-color: #37123c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #daf0ee;
+  min-width: 30vw;
+  animation: grow 0.7s ease-out;
+}
+
+header > * {
+  opacity: 0;
+  animation: show 0.5s ease-in forwards;
+  animation-delay: 0.7s;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.name {
+  color: #ae9fbe;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.heading {
+  color: #dda77b;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+header span a {
+  color: #daf0ee;
+}
+
+i {
+  font-size: 2rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 100%;
+  overflow-y: scroll;
+}
+
+article {
+  height: fit-content;
+  border-top: 1px solid #3b413c;
+  border-bottom: 1px solid #3b413c;
+  border-right: 1px solid #3b413c;
+  margin: auto 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+article .heading {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
+}
+
+@keyframes grow {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.b-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.timeline {
+  list-style-type: none;
+}
+
+.timeline > li {
+  position: relative;
+  padding-bottom: 1em;
+  padding-left: 5rem;
+}
+
+.timeline li::before {
+  content: "";
+  width: 0.3rem;
+  background: linear-gradient(#a2b9e2, #7899d4);
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 4rem;
+}
+
+.timeline li::after {
+  content: ".";
+  color: #7899d4;
+  position: absolute;
+  font-size: 6rem;
+  left: 3.55rem;
+  top: -4rem;
+}
+
+.year {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.year {
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.single-line-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-line-list li {
+  margin: 0px 1rem;
+}
+
+.b {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.i-year {
+  margin-left: -1.1rem;
+}
+
+li ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    overflow: auto;
+    height: auto;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+
+  .timeline {
+    padding-left: 0px;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  @keyframes grow {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  article {
+    margin-bottom: 1rem;
+  }
+}
