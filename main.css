@@ -2,6 +2,7 @@
 
 * {
   font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 header {
@@ -158,6 +159,19 @@ p {
 
 li ul li {
   margin-bottom: 0.5rem;
+}
+
+.download-btn {
+  background-color: #8d99ae;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.download-btn i {
+  font-size: 1.2rem;
+  padding-right: 1rem;
 }
 
 @media screen and (max-width: 900px) {

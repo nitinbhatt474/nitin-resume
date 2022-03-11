@@ -1,0 +1,32 @@
+@media print {
+  body {
+    flex-direction: column;
+    overflow: auto;
+    height: auto;
+    color-adjust: exact;
+    margin: 0;
+  }
+
+  main {
+    overflow: hidden;
+    display: block;
+  }
+
+  header {
+    padding: 1rem;
+    print-color-adjust: exact;
+    --webkit-print-color-adjust: exact;
+  }
+
+  article {
+    margin: 1rem 1.5rem 1rem 1.5rem;
+  }
+
+  @page {
+    margin: 0;
+  }
+
+  .breakpoint {
+    margin-top: 25%;
+  }
+}
