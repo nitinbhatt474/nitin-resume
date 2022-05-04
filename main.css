@@ -42,6 +42,10 @@ body {
   margin-top: 1rem;
 }
 
+.focus{
+  text-align: center;
+}
+
 header span a {
   color: #daf0ee;
 }
@@ -53,6 +57,7 @@ i {
 main {
   display: grid;
   grid-template-columns: auto auto;
+  row-gap: 1rem;
   max-width: 100%;
   overflow-y: scroll;
 }
@@ -174,6 +179,14 @@ li ul li {
   padding-right: 1rem;
 }
 
+.internship{
+  grid-row: span 2;
+}
+
+.breakpoint{
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
   body {
     flex-direction: column;
@@ -182,12 +195,7 @@ li ul li {
   }
 
   main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-    padding: 1rem;
-    overflow-x: hidden;
+   display: block;
   }
 
   .timeline {

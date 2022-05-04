@@ -1,4 +1,10 @@
 @media print {
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+  }
+  
   body {
     flex-direction: column;
     overflow: auto;
@@ -24,9 +30,10 @@
 
   @page {
     margin: 0;
+    size: A4;
   }
 
   .breakpoint {
-    margin-top: 5%;
+    display: block;
   }
 }
